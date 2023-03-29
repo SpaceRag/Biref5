@@ -12,17 +12,27 @@ body {
     // $police_principale: 'Pixel-Art';
 }
 
+#Sound {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 10%;
+}
+// PERSO SECLECTION
 
 
-.tamagotchi_container {
+.home {
+    display: flex;
+}
+
+.tamagotchiContainer {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-// PERSO SECLECTION 
 
 .tamagotchi {
     display: flex;
@@ -32,6 +42,7 @@ body {
     padding: 50px;
     border-radius: 10px;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.579);
+    
 
     h1 {
         font-size: 30px;
@@ -50,6 +61,8 @@ body {
     }
 }
 
+
+
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -67,7 +80,7 @@ body {
 .name_input {
     display: flex;
     flex-direction: column;
-    background-color: #838383;
+    background-color: #83838379;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -83,7 +96,8 @@ body {
         border-radius: 20px;
         border-style: none;
         outline-style: none;
-        
+        margin-inline: 20%;
+
         &:hover {
             animation: grow 0.5s ease-in-out
         }
@@ -95,9 +109,11 @@ body {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }
@@ -116,5 +132,48 @@ body {
     &:hover {
         background-color: #3e8e41;
         animation: grow 0.5s ease-in-out
+    }
+}
+
+// SECTION GAME 
+.game {
+    display: none;
+}
+.tamagotchiGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6b6a6a99;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.579);
+
+    img {
+        width: 500px;
+        height: 500px;
+
+        &#geko {
+            position: absolute;
+            top: 65%;
+            width: 100px;
+            height: 100px;
+        }
+
+        &#cat {
+            position: absolute;
+            top: 65%;
+            left: 60%;
+            width: 100px;
+            height: 100px;
+        }
+
+        &#bird {
+            position: absolute;
+            top: 65%;
+            right: 60%;
+            width: 100px;
+            height: 100px;
+        }
+
     }
 }

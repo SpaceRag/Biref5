@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brief5</title>
     <link rel="stylesheet" href="style.scss">
-    
+    <link rel="stylesheet" href="mediaQ.scss">
+
 </head>
+
 <body>
-    <div class="tamagotchi_container">
-		<div class="tamagotchi">
-            <h1>Choose your pilote !</h1>
-			<img src="./assets/Img/RagnarOrionArno_pixel_art_of_a_cute_2D_character_with_four_dire_e3a67da4-f6d9-4858-9ae1-2632fcc01eb1-removebg-preview.png" alt="Tamagotchi">
-            <div class="name_input">
-                <p>Let's give your spaceship pilot a name!</p>
-                <input type="text" name="" id="perso_name" placeholder="Pilot Name">
+    <section class="home">
+        <div class="tamagotchiContainer">
+            <div class="tamagotchi">
+                <h1>Choose your pilote !</h1>
+                <div class="perso">
+                    <img id="geko" src="./assets/Img/2_GEKO_SPACE_PILOT.png" alt="Perso Geko">
+                    <img id="cat" src="./assets/Img/1CUT_CAT_SPACE_PILOTE.png" alt="Perso Cat">
+                    <img id="bird" src="./assets/Img/3_CUTE_BIRD_SPACE_PILOT.png" alt="Perso Bird">
+                </div>
+                <div class="name_input">
+                    <p>Let's give your spaceship pilot a name!</p>
+                    <input id="perso_name" type="text" placeholder="Enter Pilot Name">
+                </div>
+                <div class="actions">
+                    <button class="btn">Start</button>
+                </div>
             </div>
-			<div class="actions">
-				<button class="btn">Start</button>
-			</div>
-		</div>
-	</div>
+        </div>
+    </section>
+    <section class="game">
+        <div class="tamagotchiGame">
+            <img src="./assets/Img/Interior_Spaceship.jpg" alt="" class="cockpit">
+            <img id="geko" src="./assets/Img/2_GEKO_SPACE_PILOT.png" alt="Perso Geko">
+            <img id="cat" src="./assets/Img/1CUT_CAT_SPACE_PILOTE.png" alt="Perso Cat">
+            <img id="bird" src="./assets/Img/3_CUTE_BIRD_SPACE_PILOT.png" alt="Perso Bird">
+        </div>
+    </section>
+
+    <!-- <audio id="Sound" controls autoplay loop>
+        <source src="./assets/Sound/Cockpit_sound.mp3" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio> -->
     <script src="./script.ts" type="module"></script>
 </body>
+
 </html>
