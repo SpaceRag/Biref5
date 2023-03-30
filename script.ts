@@ -16,8 +16,38 @@ let username: string | null = null
 
 // SECTION HOME 
 
-// User Perso Input
+// Perso Selection 
 
+// Quand le user click sur un perso les autres disparaissent 
+gekPerso?.addEventListener('click', function (event: Event) {
+    catPerso?.classList.remove('show')
+    catPerso?.classList.add('hide')
+
+    birdPerso?.classList.remove('show')
+    birdPerso?.classList.add('hide')
+
+})
+
+catPerso?.addEventListener('click', function (event: Event) {
+    gekPerso?.classList.remove('show')
+    gekPerso?.classList.add('hide')
+
+    birdPerso?.classList.remove('show')
+    birdPerso?.classList.add('hide')
+
+})
+
+birdPerso?.addEventListener('click', function (event: Event) {
+    catPerso?.classList.remove('show')
+    catPerso?.classList.add('hide')
+
+    gekPerso?.classList.remove('show')
+    gekPerso?.classList.add('hide')
+
+})
+
+// User Perso Input
+// Ajouter une 
 inputPersoName?.addEventListener("input", function (event: Event) {
     username = (event.target as HTMLInputElement).value
 })
@@ -32,14 +62,13 @@ startBtn?.addEventListener('click', function (event: Event) {
 
     } else {
 
-        home?.classList.remove("display")
-        home?.classList.add("hidden")
+        home?.classList.remove('display')
+        home?.classList.add('hidden')
 
-        game?.classList.remove("hidden")
-        game?.classList.add("display")
+        game?.classList.remove('hidden')
+        game?.classList.add('display')
 
     }
 
-
-
 })
+

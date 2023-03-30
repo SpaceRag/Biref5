@@ -23,6 +23,14 @@ body {
     display: flex;
 }
 
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
 .hidden {
     display: none;
 }
@@ -40,6 +48,12 @@ body {
     border-radius: 10px;
 }
 
+.arrow {
+    position: sticky;
+    left: 50px;
+    bottom: 430px;
+    animation: bounce 0.5s infinite;
+}
 
 .tamagotchi {
     display: flex;
@@ -68,6 +82,10 @@ body {
     }
 }
 
+.perso {
+    display: flex;
+    flex-direction: row;
+}
 
 
 @keyframes bounce {
