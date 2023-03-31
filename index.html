@@ -8,6 +8,7 @@
     <title>Brief5</title>
     <link rel="stylesheet" href="style.scss">
     <link rel="stylesheet" href="mediaQ.scss">
+    <link rel="stylesheet" href="./Game.scss">
 
 </head>
 
@@ -16,12 +17,12 @@
         <div class="tamagotchiContainer">
             <div class="tamagotchi">
                 <h1>Choose your pilote !</h1>
-                <img class="arrow" src="./assets/Img/Arrow.png" alt="" ">
+                <img class="arrow" src="./assets/Img/Arrow.png" alt="">
                 <div 
                 class="perso">
                     <img id="geko" class="show" src="./assets/Img/2_GEKO_SPACE_PILOT.png" alt="Perso Geko">
                     <img id="cat" class="show" src="./assets/Img/1CUT_CAT_SPACE_PILOTE.png" alt="Perso Cat">
-                    <img id="bird" class="show" src="./assets/Img/3_CUTE_BIRD_SPACE_PILOT.png" alt="Perso Bird">
+                    <img id="fox" class="show" src="./assets/Img/3FOX_SPACE_PILOT.png" alt="Perso Bird">
                 </div>
                 <div class="name_input">
                     <p>Let's give your spaceship pilot a name!</p>
@@ -35,10 +36,19 @@
     </section>
     <section id="game" class="hidden">
         <div class="tamagotchiGame">
-            <img src="./assets/Img/Interior_Spaceship.jpg" alt="" class="cockpit">
+            <img src="./assets/Img/Interior_Spaceship.jpg" alt="">
             <img id="geko" src="./assets/Img/2_GEKO_SPACE_PILOT.png" alt="Perso Geko">
             <img id="cat" src="./assets/Img/1CUT_CAT_SPACE_PILOTE.png" alt="Perso Cat">
-            <img id="bird" src="./assets/Img/3_CUTE_BIRD_SPACE_PILOT.png" alt="Perso Bird">
+            <img id="fox" src="./assets/Img/3FOX_SPACE_PILOT.png" alt="Perso Fox">
+            <div class="gameStats">
+                <progress id="food" class="statBar" value="60" max="100"></progress>
+                <progress id="water" class="statBar" value="80" max="100"></progress>
+                <progress id="special" class="statBar" value="40" max="100"></progress>
+            </div>
+            <div class="userCom">
+                <p>User Cmd</p>
+                <input id="inUsrCmd" type="text">
+            </div>
         </div>
     </section>
 

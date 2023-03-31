@@ -1,0 +1,105 @@
+// SECTION GAME 
+
+.tamagotchiGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6b6a6a99;
+    border-radius: 10px;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.579);
+
+    img {
+        width: 500px;
+        height: 500px;
+
+        &#geko {
+            position: absolute;
+            top: 55%;
+            width: 150px;
+            height: 150px;
+            animation: wobble 2s ease infinite, walking 5s ease infinite;
+        }
+
+        @keyframes walking {
+            0% {
+                transform: translateX(50%);
+            }
+
+            25% {
+                transform: translateX(65%);
+            }
+
+            50% {
+                transform: translateX(45%);
+            }
+
+            75% {
+                transform: translateX(25%);
+            }
+
+            100% {
+                transform: translateX(50%);
+            }
+
+        }
+
+        @keyframes wobble {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(5deg);
+            }
+
+            50% {
+                transform: rotate(0eg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+
+        }
+
+        &#cat {
+            display: none;
+            position: absolute;
+            top: 65%;
+            width: 150px;
+            height: 150px;
+        }
+
+        &#fox {
+            display: none;
+            position: absolute;
+            top: 65%;
+            width: 150px;
+            height: 150px;
+        }
+
+    }
+}
+
+// STATS BARS
+
+.gameStats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #6b6a6a99;
+    border-radius: 10px;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.579);
+
+    &#inUsrCmd {
+      padding: 1rem;
+    }
+
+   
+}
+

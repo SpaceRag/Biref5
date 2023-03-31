@@ -6,7 +6,7 @@ const game: HTMLElement | null = document.querySelector("#game")
 const startBtn: HTMLElement | null = document.querySelector(".btn")
 const gekPerso: HTMLElement | null = document.querySelector("#geko")
 const catPerso: HTMLElement | null = document.querySelector("#cat")
-const birdPerso: HTMLElement | null = document.querySelector("#bird")
+const foxPerso: HTMLElement | null = document.querySelector("#fox")
 const inputPersoName: HTMLElement | null = document.querySelector("#perso_name")
 const errorMessage: string = "Enter Pilot Name"
 
@@ -23,8 +23,8 @@ gekPerso?.addEventListener('click', function (event: Event) {
     catPerso?.classList.remove('show')
     catPerso?.classList.add('hide')
 
-    birdPerso?.classList.remove('show')
-    birdPerso?.classList.add('hide')
+    foxPerso?.classList.remove('show')
+    foxPerso?.classList.add('hide')
 
 })
 
@@ -32,12 +32,12 @@ catPerso?.addEventListener('click', function (event: Event) {
     gekPerso?.classList.remove('show')
     gekPerso?.classList.add('hide')
 
-    birdPerso?.classList.remove('show')
-    birdPerso?.classList.add('hide')
+    foxPerso?.classList.remove('show')
+    foxPerso?.classList.add('hide')
 
 })
 
-birdPerso?.addEventListener('click', function (event: Event) {
+foxPerso?.addEventListener('click', function (event: Event) {
     catPerso?.classList.remove('show')
     catPerso?.classList.add('hide')
 
@@ -47,7 +47,7 @@ birdPerso?.addEventListener('click', function (event: Event) {
 })
 
 // User Perso Input
-// Ajouter une 
+
 inputPersoName?.addEventListener("input", function (event: Event) {
     username = (event.target as HTMLInputElement).value
 })
