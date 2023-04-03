@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.scss">
     <link rel="stylesheet" href="mediaQ.scss">
     <link rel="stylesheet" href="./Game.scss">
+    <link rel="stylesheet" href="Home.scss">
 
 </head>
 
@@ -41,13 +42,24 @@
             <img id="cat" src="./assets/Img/1CUT_CAT_SPACE_PILOTE.png" alt="Perso Cat">
             <img id="fox" src="./assets/Img/3FOX_SPACE_PILOT.png" alt="Perso Fox">
             <div class="gameStats">
-                <progress id="food" class="statBar" value="60" max="100"></progress>
-                <progress id="water" class="statBar" value="80" max="100"></progress>
-                <progress id="special" class="statBar" value="40" max="100"></progress>
+                <div class="food">
+                    <progress id="food" class="statBar" value="60" max="100"></progress>
+                <button class="btnfood">Food</button>
+                </div>
+                <div class="water">
+                    <progress id="water" class="statBar" value="80" max="100"></progress>
+                <button class="btnwater">Water</button>
+                </div>
+                <div class="special">
+                    <progress id="special" class="statBar" value="40" max="100"></progress>
+                <button class="btnspc">special</button>
+                </div>
             </div>
             <div class="userCom">
-                <p>User Cmd</p>
-                <input id="inUsrCmd" type="text">
+                <div class="cmd">
+                    <!-- <label for="inputuser">Entrer la commande</label> -->
+                    <input id="inUsrCmd" type="text" placeholder="Entre ta commande ici">
+                </div>
             </div>
         </div>
     </section>

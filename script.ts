@@ -53,7 +53,8 @@ inputPersoName?.addEventListener("input", function (event: Event) {
 })
 
 
-// Quand le user click sur le btn start -> affiche la section "game" SI le user a rempli l'input. 
+// Quand le user click sur le btn start -> affiche la section "game" 
+// Uniquement SI le user a rempli l'input. 
 
 startBtn?.addEventListener('click', function (event: Event) {
     if (!username) {

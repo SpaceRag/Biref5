@@ -14,57 +14,46 @@
 
         &#geko {
             position: absolute;
-            top: 55%;
+            top: 50%;
             width: 150px;
             height: 150px;
-            animation: wobble 2s ease infinite, walking 5s ease infinite;
+            animation: 
+            walk 5s infinite;
         }
 
-        @keyframes walking {
+        @keyframes walk  {
             0% {
                 transform: translateX(50%);
-            }
-
-            25% {
-                transform: translateX(65%);
-            }
-
-            50% {
-                transform: translateX(45%);
-            }
-
-            75% {
-                transform: translateX(25%);
-            }
-
-            100% {
-                transform: translateX(50%);
-            }
-
-        }
-
-        @keyframes wobble {
-            0% {
                 transform: rotate(0deg);
+                // transform: scale(1);
             }
 
             25% {
-                transform: rotate(5deg);
+                transform: translateX(85%);
+                transform: rotate(3deg);
+                // transform: scale(1.1);
             }
 
             50% {
+                transform: translateX(-35%);
                 transform: rotate(0eg);
+                // transform: scale(1.2);
             }
 
             75% {
-                transform: rotate(-5deg);
+                transform: translateX(-65%);
+                transform: rotate(-3deg);
+                // transform: scale(1.1);
             }
 
             100% {
+                transform: translateX(50%);
                 transform: rotate(0deg);
+                // transform: scale(1);
             }
 
         }
+
 
         &#cat {
             display: none;
@@ -92,14 +81,44 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
+    padding: 1rem;
     background-color: #6b6a6a99;
     border-radius: 10px;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.579);
 
-    &#inUsrCmd {
-      padding: 1rem;
+    button {
+        border-style: none;
+        border-radius: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-   
+    .btnfood {
+        background-color: #96d800;
+    }
+    .btnwater {
+        background-color: #fd5a2d;
+    }
+    .btnspc {
+        background-color: #f9e162;
+    }
+
 }
 
+.cmd {
+
+    input {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 20px;
+        border-style: none;
+        outline-style: none;
+        padding: 2rem;
+        margin: 1rem;
+        background-color: #6b6a6a99;
+        border-radius: 10px;
+        box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.579);
+    }
+}
