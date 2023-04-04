@@ -60,6 +60,7 @@ startBtn?.addEventListener('click', function (event: Event) {
     if (!username) {
         inputPersoName.value = errorMessage
         inputPersoName.style.color = "red"
+        inputPersoName.style.fontWeight = "stronger"
 
     } else {
 
@@ -72,4 +73,8 @@ startBtn?.addEventListener('click', function (event: Event) {
     }
 
 })
+
+// Quand le user click sur un "Pilot"
+//  Le pilot selectionné se retrouve sur la section game
+
 

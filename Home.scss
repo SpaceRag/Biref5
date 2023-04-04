@@ -85,6 +85,7 @@
         border-style: none;
         outline-style: none;
         margin-inline: 20%;
+        padding: 12px;
 
         &:hover {
             animation: grow 0.5s ease-in-out
@@ -111,11 +112,14 @@
 .btn {
     background-color: rgba(209, 76, 99, 1);
     color: white;
-    padding: 10px 20px;
+    padding: 20px 40px;
     border: none;
     border-radius: 5px;
+    font-size: larger;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background-color 0.3s ease;
+    animation: scale 0.5 ease-in-out;
 
     &:hover {
         background-color: #3e8e41;
