@@ -50,6 +50,11 @@
     flex-direction: row;
 }
 
+.selectedPerso {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    animation: bounce 2s infinite;
+}
 
 @keyframes bounce {
     0% {
