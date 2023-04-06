@@ -1,3 +1,4 @@
+import {Pilot} from "./Pilot"
 
 class Geko extends Pilot {
     private Temperature: number;

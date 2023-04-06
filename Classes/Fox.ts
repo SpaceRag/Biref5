@@ -1,3 +1,4 @@
+import {Pilot} from "./Pilot"
 
 class Fox extends Pilot {
     private Cunning: number;

@@ -1,3 +1,4 @@
+import {Pilot} from "./Pilot"
 
 class Cat extends Pilot {
     private Agility: number;
