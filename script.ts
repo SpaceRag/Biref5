@@ -69,33 +69,40 @@ startBtn?.addEventListener('click', function (event: Event) {
     home?.classList.add('hidden')
     game?.classList.remove('hidden')
     game?.classList.add('display')
-  
+
+    // Fais spawn le perso selected
+    const selectedPersoClone = selectedPersoElement?.cloneNode(true) as HTMLElement
+    const interiorSpaceShip = document.querySelector("#interiorSpaceShip")
+
+    // Remove la class du parent clone
+    selectedPersoClone.classList.remove("selectedPerso")
+
+    // Ajoute la class active
+    selectedPersoClone.classList.add("selectedPilote")
+
+    // Spawn le perso
+    interiorSpaceShip?.appendChild(selectedPersoClone)
+    console.log(selectedPersoClone);
+    
+
     // Appel des fonctions pour chaque jauge
     const interval1 = setInterval(() => {
       decreaseBar('food')
     }, 1500) // Diminue la jauge toutes les secondes
     initBar('food', 'btnfood')
-    
+
     const interval2 = setInterval(() => {
       decreaseBar('water')
-    }, 1000) 
+    }, 1000)
     initBar('water', 'btnwater')
-    
+
     const interval3 = setInterval(() => {
       decreaseBar('special')
-    }, 2000) 
+    }, 2000)
     initBar('special', 'btnspc')
-    
-    // Fais spawn le perso selected
-    const selectedPersoClone = selectedPersoElement?.cloneNode(true) as HTMLElement
-    const gameSection = document.querySelector("#game")
-    // Remove la class du parent clone
-    selectedPersoClone.classList.remove("selectedPerso")
-    // Ajoute la class active
-    selectedPersoClone.classList.add("selectedPilote")
-    // Spawn le perso
-    gameSection?.appendChild(selectedPersoClone)
+
   }
+
 })
 
 
@@ -106,7 +113,7 @@ function decreaseBar(barId: string) {
   const bar = document.getElementById(barId) as HTMLProgressElement
   bar.value -= 2
   if (bar.value === 0) {
-    console.log('Game Over')
+    // console.log('Game Over')
     // location.reload()
   }
 }
@@ -120,7 +127,7 @@ function initBar(barId: string, buttonId: string) {
   console.log(buttonId)
   // Incrémentation au click sur button
   button.onclick = () => {
-  bar.value += 10
+    bar.value += 10
   }
 }
 

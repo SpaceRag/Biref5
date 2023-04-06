@@ -8,80 +8,75 @@
     border-radius: 10px;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.579);
 
+    .interiorSpaceShip {
+        position: absolute;
+        display: inline-block;
+    }
+
+    .selectedPilote {
+        position: absolute;
+        top: 450px;
+        left: 500px;
+        width: 150px;
+        height: 150px;
+        animation: walk 8s ease infinite;
+    }
+
     img {
         width: 500px;
         height: 500px;
 
+
+
         &#geko {
             position: absolute;
-            top: 50%;
+            // bottom: 0;
+            // left: 0;
             width: 150px;
             height: 150px;
-            animation: walk 8s ease infinite;
+            // animation: walk 8s ease infinite;
         }
-
-        @keyframes walk {
-            0% {
-                transform: translateX(50%) rotate(0deg) scale(1) scaleX(1);
-            }
-
-            25% {
-                transform: translateX(75%) rotate(3deg) scale(1);
-            }
-
-            50% {
-                transform: translateX(-35%) rotate(0deg) scale(0.8) scaleX(-1);
-            }
-
-            75% {
-                transform: translateX(-45%) rotate(-3deg) scale(1);
-            }
-
-            100% {
-                transform: translateX(50%) rotate(0deg) scale(1) scaleX(1);
-            }
-        }
-
-
 
         &#cat {
             position: absolute;
-            top: 335px;
-            left: 300px;
-            width: 50px;
-            height: 50px;
+            // bottom: 0;
+            // left: 0;
+            width: 150px;
+            height: 150px;
+            // animation: walk 8s ease infinite;
 
         }
 
         &#fox {
             position: absolute;
-            top: 225px;
-            right: 465px;
-            width: 50px;
-            height: 50px;
+            // bottom: 30;
+            // left: 0;
+            width: 150px;
+            height: 150px;
+            // animation: walk 8s ease infinite;
         }
 
     }
 
-    @keyframes spin {
+    @keyframes walk {
         0% {
-            rotate: 0deg;
+            transform: translateX(50%) rotate(0deg) scale(1) scaleX(1);
         }
 
         25% {
-            rotate: 90deg;
+            transform: translateX(75%) rotate(3deg) scale(1);
         }
 
         50% {
-            rotate: 360deg;
+            transform: translateX(-35%) rotate(0deg) scale(0.8) scaleX(-1);
         }
 
         75% {
-            rotate: 180deg;
+            transform: translateX(-45%) rotate(-3deg) scale(1);
         }
 
         100% {
-            rotate: 0deg;
+            transform: translateX(50%) rotate(0deg) scale(1) scaleX(1);
         }
 
     }
@@ -109,15 +104,36 @@
     }
 
     #btnfood {
-        background-color: #96d800;
+        background-color: rgba(134, 184, 92, 0.579);
+        width: 50px;
+        height: 50px;
+        box-shadow: 2px 4px 8px rgba(134, 184, 92, 0.579);
+        border-radius: 20px;
+        &:hover {
+            animation: grow 0.5s ease-in-out infinite
+        }
     }
 
     #btnwater {
-        background-color: #fd5a2d;
+        background-color: rgba(12, 136, 193, 0.623);
+        width: 50px;
+        height: 50px;
+        box-shadow: 2px 4px 8px rgba(12, 136, 193, 0.623);
+        border-radius: 20px;
+        &:hover {
+            animation: grow 0.5s ease-in-out infinite
+        }
     }
 
     #btnspc {
-        background-color: #f9e162;
+        background-color: rgba(223, 72, 27, 0.579);
+        width: 50px;
+        height: 50px;
+        box-shadow: 1px 3px 8px rgba(223, 72, 27, 0.579);
+        border-radius: 20px;
+        &:hover {
+            animation: grow 0.5s ease-in-out infinite
+        }
     }
 
 }
