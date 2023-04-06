@@ -5,10 +5,11 @@
 const home: HTMLElement | null = document.querySelector("#home")
 const game: HTMLElement | null = document.querySelector("#game")
 const startBtn: HTMLElement | null = document.querySelector(".btn")
-const gekPerso: HTMLElement | null = document.querySelector("#geko")
-const catPerso: HTMLElement | null = document.querySelector("#cat")
-const foxPerso: HTMLElement | null = document.querySelector("#fox")
-const inputPersoName: HTMLElement | null = document.querySelector("#perso_name")
+const gekPerso = document.querySelector("#geko") as HTMLElement
+const catPerso = document.querySelector("#cat") as HTMLElement
+const foxPerso = document.querySelector("#fox") as HTMLElement
+const inputPersoName = document.querySelector("#perso_name") as HTMLInputElement
+
 const errorMessage: string = "Enter Pilot Name"
 
 // Déclaration Variable 
@@ -69,9 +70,10 @@ startBtn?.addEventListener('click', function (event: Event) {
     game?.classList.remove('hidden')
     game?.classList.add('display')
   
+    // Appel des fonctions pour chaque jauge
     const interval1 = setInterval(() => {
       decreaseBar('food')
-    }, 1000) // Diminue la jauge toutes les secondes
+    }, 1500) // Diminue la jauge toutes les secondes
     initBar('food', 'btnfood')
     
     const interval2 = setInterval(() => {
@@ -81,7 +83,7 @@ startBtn?.addEventListener('click', function (event: Event) {
     
     const interval3 = setInterval(() => {
       decreaseBar('special')
-    }, 1000) 
+    }, 2000) 
     initBar('special', 'btnspc')
     
     // Fais spawn le perso selected
@@ -91,6 +93,7 @@ startBtn?.addEventListener('click', function (event: Event) {
     selectedPersoClone.classList.remove("selectedPerso")
     // Ajoute la class active
     selectedPersoClone.classList.add("selectedPilote")
+    // Spawn le perso
     gameSection?.appendChild(selectedPersoClone)
   }
 })
@@ -103,11 +106,8 @@ function decreaseBar(barId: string) {
   const bar = document.getElementById(barId) as HTMLProgressElement
   bar.value -= 2
   if (bar.value === 0) {
-    clearInterval(interval1)
-    clearInterval(interval2)
-    clearInterval(interval3)
     console.log('Game Over')
-    location.reload()
+    // location.reload()
   }
 }
 
@@ -124,21 +124,6 @@ function initBar(barId: string, buttonId: string) {
   }
 }
 
-// Appel des fonctions pour chaque jauge
-// const interval1 = setInterval(() => {
-//   decreaseBar('food')
-// }, 1000) // Diminue la jauge toutes les secondes
-// initBar('food', 'btnfood')
-
-// const interval2 = setInterval(() => {
-//   decreaseBar('water')
-// }, 1000) 
-// initBar('water', 'btnwater')
-
-// const interval3 = setInterval(() => {
-//   decreaseBar('special')
-// }, 1000) 
-// initBar('special', 'btnspc')
 
 
 // GAME OVER //////////////////////////////////////
