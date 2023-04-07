@@ -81,9 +81,16 @@ startBtn?.addEventListener('click', function (event: Event) {
     selectedPersoClone.classList.add("selectedPilote")
 
     // Spawn le perso
-    interiorSpaceShip?.appendChild(selectedPersoClone)
-    console.log(selectedPersoClone);
-    
+    interiorSpaceShip?.append(selectedPersoClone)
+    console.log(selectedPersoClone)
+    // Positionne l'élément de manière absolue par rapport à son parent
+    selectedPersoClone.style.position = "absolute"
+
+    // Ajuste sa position à l'intérieur du conteneur parent
+    selectedPersoClone.style.top = "42%"
+    selectedPersoClone.style.left = "40%"
+    selectedPersoClone.style.transform = "translate(-50%, -50%)"
+
 
     // Appel des fonctions pour chaque jauge
     const interval1 = setInterval(() => {
@@ -124,10 +131,11 @@ function initBar(barId: string, buttonId: string) {
   const bar = document.getElementById(barId) as HTMLProgressElement
   const button = document.getElementById(buttonId) as HTMLButtonElement
   bar.value = 100
-  console.log(buttonId)
+  // console.log(buttonId)
   // Incrémentation au click sur button
   button.onclick = () => {
     bar.value += 10
+    bar.style.animation = "grow 0.5s ease-in-out"
   }
 }
 
