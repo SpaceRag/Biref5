@@ -87,7 +87,7 @@ startBtn?.addEventListener('click', function (event: Event) {
     selectedPersoClone.style.position = "absolute"
 
     // Ajuste sa position à l'intérieur du conteneur parent
-    selectedPersoClone.style.top = "42%"
+    selectedPersoClone.style.top = "40%"
     selectedPersoClone.style.left = "40%"
     selectedPersoClone.style.transform = "translate(-50%, -50%)"
 

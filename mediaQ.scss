@@ -1,35 +1,11 @@
+@media screen and (max-width: 321px) {
 
-// MEDIA QUERYS FOR HOME/SELECTION
-
-@media screen and (max-width: 480px) {
-    .tamagotchi {
-      img {
-        width: 100px;
-        height: 100px;
-        cursor: pointer;
-    }  
- }
-    
 }
 
 @media screen and (max-width: 376px) {
-    .tamagotchi {
-      img {
-        width: 80px;
-        height: 80px;
-        cursor: pointer;
-    }  
- }
-    
 }
 
-@media screen and (max-width: 321px) {
-    .tamagotchi {
-      img {
-        width: 70px;
-        height: 70px;
-        cursor: pointer;
-    }  
- }
-    
+
+@media screen and (max-width: 480px) {
 }
+
