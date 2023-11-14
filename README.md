@@ -1,6 +1,11 @@
 # Brief n°5 Tamagochi
 
 ## Création d'un tamagotchi-like 
+## ScreenShot 
+![Screenshot from 2023-11-14 14-49-13](https://github.com/SpaceRag/TamaAdventuresB5/assets/123640951/17f9c69d-d7ee-454a-8726-5e818d48518a)
+![Screenshot from 2023-11-14 14-50-26](https://github.com/SpaceRag/TamaAdventuresB5/assets/123640951/12801cd9-359c-4585-b950-351b4969ddc5)
+
+
 
 # Livrables
 
